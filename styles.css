@@ -209,7 +209,7 @@ aside {
     }
     .main-content .desktop-form button[type="submit"] {
         top: 5px;
-        right: 5px;
+        right: 190px;
         position: absolute;
         width: fit-content;
         margin: 0;

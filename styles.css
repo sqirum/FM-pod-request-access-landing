@@ -247,4 +247,7 @@ aside {
     .desktop-host {
         display: block;
     }
+    aside {
+        top: 130px;
+    }
 }

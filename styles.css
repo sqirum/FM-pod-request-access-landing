@@ -119,6 +119,16 @@ aside {
     padding: 9px 30px;
 }
 
+.main-content .error-empty,
+.main-content .error-invalid {
+    display: none;
+    font-weight: 800;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-left: 30px;
+    color: #FB3E3E;
+}
+
 .tablet-host {
     display: none;
 }

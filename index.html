@@ -25,8 +25,10 @@
     <h1>Publish your podcasts <br> everywhere.</h1>
     <p>Upload your audio to Pod with a single click. We'll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
     <form action="" role="form" class="desktop-form" id="desktop-form">
-      <input type="email" name="" id="email" placeholder="Email address">
+      <input type="email" name="" id="desktopEmail" placeholder="Email address">
       <button type="submit" role="button">Request access</button>
+      <p class="error-empty">Oops! Please add your email</p>
+      <p class="error-invalid">Oops! Please check your email</p>
     </form>
     <div class="icons-group">
       <div class="icon">
@@ -43,9 +45,31 @@
       </div>
     </div>
     <form action="" role="form" class="mobile-form" id="mobile-form">
-      <input type="email" name="" id="email" placeholder="Email address">
+      <input type="email" name="" id="mobileEmail" placeholder="Email address">
       <button type="submit" role="button">Request access</button>
     </form>
   </main>
+  <script>
+    let inputs = document.querySelectorAll("input[type='email']");
+    let error_empty = document.querySelector('.error-empty');
+    let error_invalid = document.querySelector('.error-invalid');
+
+    inputs.forEach( input => {
+      input.nextElementSibling.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (input.value === '') {
+          error_empty.style.display = "block";
+          error_invalid.style.display = "none";
+        } else {
+          if ( !(input.value.includes('@')) ) {
+            error_empty.style.display = "none";
+            error_invalid.style.display = "block";
+          }
+        }
+
+      })
+      
+    })
+  </script>
 </body>
 </html>

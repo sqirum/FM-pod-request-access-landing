@@ -119,6 +119,14 @@ aside {
     padding: 9px 30px;
 }
 
+.tablet-host {
+    display: none;
+}
+
+.desktop-host {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
     html {
         background-image: none;
@@ -180,10 +188,53 @@ aside {
         margin-top: 64px;
         align-items: start;
     }
+    .main-content form {
+        position: relative;
+    }
     .main-content .mobile-form {
         display: none;
     }
     .main-content .desktop-form {
+        display: block;
+    }
+    .main-content .desktop-form button[type="submit"] {
+        top: 5px;
+        right: 5px;
+        position: absolute;
+        width: fit-content;
+        margin: 0;
+        cursor: pointer;
+    }
+    .main-content .desktop-form button[type="submit"]:hover {
+        background: #B3FFE2;
+        box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
+    }
+    .main-content .desktop-form input[type="email"] {
+        padding: 14px 30px;
+    }
+    .tablet-host {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header .logo {
+        margin-left: 165px;
+        padding-top: 100px;
+    }
+    .main-content {
+        margin: 165px;
+        margin-top: 100px;
+        padding-top: 88px;
+        padding-right: 88px;
+        padding-bottom: 88px;
+        max-width: 723px;
+    }
+    .tablet-host {
+        display: none;
+    }
+    
+    .desktop-host {
         display: block;
     }
 }

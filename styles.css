@@ -221,6 +221,7 @@ aside {
     }
     .main-content .desktop-form input[type="email"] {
         padding: 14px 30px;
+        max-width: 450px;
     }
     .tablet-host {
         display: block;

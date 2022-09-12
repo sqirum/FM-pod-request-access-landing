@@ -34,6 +34,10 @@ header .logo {
     padding-top: 60px;
 }
 
+aside {
+    display: none;
+}
+
 .main-content {
     margin: 24px;
     margin-top: 60px;
@@ -80,6 +84,13 @@ header .logo {
     margin-top: 48px;
 }
 
+.main-content .mobile-form {
+    display: block;
+}
+.main-content .desktop-form {
+    display: none;
+}
+
 .main-content form input[type="email"] {
     background-color: var(--neutral-dark);
     border-radius: 28px;
@@ -109,7 +120,70 @@ header .logo {
 }
 
 @media only screen and (min-width: 768px) {
+    html {
+        background-image: none;
+    }
     body {
-      background-color: lightblue;
+        background-color: var(--secondary);
+    }
+    header {
+        width: 40%;
+    }
+    header .logo {
+        text-align: start;
+        margin-left: 40px;
+        padding-top: 50px;
+    }
+    aside {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        z-index: -1;
+    }
+    aside img {
+        width: 100%;
+    }
+    aside .podcast-host {
+        position: relative;
+    }
+    aside .circle-dots {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 230px;
+        transform: translateY(50%);
+    }
+    .main-content {
+        margin: 40px;
+        margin-top: 150px;
+        width: 60%;
+        background-color: var(--secondary);
+        padding-top: 90px;
+        padding-right: 40px;
+    }
+    .main-content h1 {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: start;
+    }
+    .main-content p {
+        text-align: start;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-top: 31px;
+    }
+    .main-content .icons-group {
+        margin-top: 64px;
+        align-items: start;
+    }
+    .main-content .mobile-form {
+        display: none;
+    }
+    .main-content .desktop-form {
+        display: block;
     }
 }
